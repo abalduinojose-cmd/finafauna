@@ -22,27 +22,28 @@ export default function Hero() {
       id="inicio"
       className="relative flex min-h-svh flex-col justify-end overflow-hidden bg-noite"
     >
-      {/* vídeo cru, sem degradê por cima (pedido do cliente) */}
+      {/* vídeo em destaque: só um contraste leve na base, onde o texto pisa */}
       <div className="absolute inset-0" aria-hidden>
         <HeroVideo />
+        <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-noite/80 via-noite/35 to-transparent" />
       </div>
       <div className="paw-texture absolute inset-0 opacity-[0.02]" aria-hidden />
 
       <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end px-4 pb-10 pt-32 sm:px-6 sm:pb-14">
-        <h1 className="sobe max-w-4xl text-balance font-display font-bold leading-[1.06] text-white">
-          <span className="block text-[clamp(1.7rem,4.6vw,3.4rem)] font-medium text-white/85">
+        <h1 className="sobe max-w-4xl text-balance font-display font-bold leading-[1.06] text-white [text-shadow:0_2px_26px_rgba(0,26,17,0.6),0_1px_2px_rgba(0,0,0,0.4)]">
+          <span className="block text-[clamp(1.8rem,4.8vw,3.6rem)] font-medium text-white/95">
             Tudo para tornar
           </span>
-          <span className="block text-[clamp(2.1rem,6vw,4.4rem)]">
+          <span className="block text-[clamp(2.25rem,6.2vw,4.7rem)]">
             a vida do seu pet
           </span>
-          <span className="block text-[clamp(2.1rem,6vw,4.4rem)] text-laranja">
+          <span className="block text-[clamp(2.25rem,6.2vw,4.7rem)] text-laranja [text-shadow:0_0_30px_rgba(232,82,30,0.5),0_2px_18px_rgba(0,0,0,0.45)]">
             mais feliz.
           </span>
         </h1>
 
         <p
-          className="sobe mt-5 max-w-[46ch] text-pretty text-base leading-relaxed text-white/85 sm:mt-6 sm:text-lg"
+          className="sobe mt-5 max-w-[46ch] text-pretty text-[1.05rem] font-medium leading-relaxed text-white [text-shadow:0_1px_16px_rgba(0,26,17,0.65)] sm:mt-6 sm:text-lg"
           style={{ animationDelay: "120ms" }}
         >
           Ração, acessórios, medicamentos e banho e tosa, com atendimento de
