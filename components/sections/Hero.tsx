@@ -22,11 +22,9 @@ export default function Hero() {
       id="inicio"
       className="relative flex min-h-svh flex-col justify-end overflow-hidden bg-noite"
     >
+      {/* vídeo cru, sem degradê por cima (pedido do cliente) */}
       <div className="absolute inset-0" aria-hidden>
         <HeroVideo />
-        <div className="absolute inset-0 bg-gradient-to-t from-noite via-noite/60 to-floresta/20" />
-        {/* no desktop o texto vive à esquerda: um véu extra só desse lado */}
-        <div className="absolute inset-0 hidden bg-gradient-to-r from-noite/60 via-noite/15 to-transparent lg:block" />
       </div>
       <div className="paw-texture absolute inset-0 opacity-[0.02]" aria-hidden />
 
