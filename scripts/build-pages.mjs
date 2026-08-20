@@ -8,7 +8,9 @@ process.env.NEXT_PUBLIC_BASE_PATH = "/finafauna";
 
 execSync("npx next build", { stdio: "inherit", env: process.env });
 
+// Com distDir próprio (.next-pages) + output export, o Next 16 exporta o site
+// direto para o distDir (não existe mais a pasta out/).
 rmSync("docs", { recursive: true, force: true });
-cpSync("out", "docs", { recursive: true });
+cpSync(".next-pages", "docs", { recursive: true });
 writeFileSync("docs/.nojekyll", "");
 console.log("\ndocs/ pronto para o GitHub Pages");

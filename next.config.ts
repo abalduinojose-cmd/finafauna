@@ -14,6 +14,9 @@ const nextConfig: NextConfig = {
         // pasta própria: o build da prévia não pode corromper o .next do
         // servidor de dev que fica rodando ao mesmo tempo
         distDir: ".next-pages",
+        // o cache persistente do Turbopack serviu export VELHO (e chegou a
+        // "compilar" em 1s sem emitir o out/); prévia é one-shot, sem cache
+        experimental: { turbopackFileSystemCacheForBuild: false },
         basePath: process.env.NEXT_PUBLIC_BASE_PATH ?? "",
         images: { loader: "custom" as const, loaderFile: "./lib/image-loader.ts" },
       }
