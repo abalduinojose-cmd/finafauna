@@ -1,0 +1,29 @@
+{
+  "name": "fina-fauna",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 5222",
+    "build": "next build",
+    "build:pages": "node scripts/build-pages.mjs",
+    "start": "next start -p 5222",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "lucide-react": "^1.33.0",
+    "motion": "^13.1.0",
+    "next": "16.3.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

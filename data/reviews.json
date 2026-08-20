@@ -1,0 +1,129 @@
+{
+  "atualizadoEm": "2026-08-19",
+  "lojas": {
+    "posse": {
+      "rating": 4.9,
+      "total": 25,
+      "reviews": [
+        {
+          "autor": "Felipe Zimbrão",
+          "avatar": "/avatars/felipe-zimbrao.jpg",
+          "nota": 5,
+          "texto": "Excelente atendimento e variedade de produtos. Preço justo.",
+          "quando": "2 semanas atrás",
+          "url": "https://maps.google.com/?cid=14261102997942894283"
+        },
+        {
+          "autor": "Alessandra Lahr",
+          "avatar": "/avatars/alessandra-lahr.jpg",
+          "nota": 5,
+          "texto": "Atendimento excelente! Produtos de qualidade. Vale a pena conhecer.",
+          "quando": "8 meses atrás",
+          "url": "https://maps.google.com/?cid=14261102997942894283"
+        },
+        {
+          "autor": "Livinha Santiago",
+          "avatar": "/avatars/livinha-santiago.jpg",
+          "nota": 5,
+          "texto": "Atendimento excelente e eficiente, muita variedade de produtos e alta qualidade, super indico.",
+          "quando": "um ano atrás",
+          "url": "https://maps.google.com/?cid=14261102997942894283"
+        },
+        {
+          "autor": "Vivian Matos",
+          "avatar": "/avatars/vivian-matos.jpg",
+          "nota": 5,
+          "texto": "Uma loja completa com um atendimento de excelência. Sempre com os melhores produtos para todas as necessidades.",
+          "quando": "um ano atrás",
+          "url": "https://maps.google.com/?cid=14261102997942894283"
+        },
+        {
+          "autor": "Luana Cavalcante",
+          "avatar": "/avatars/luana-cavalcante.jpg",
+          "nota": 5,
+          "texto": "O atendimento é maravilhoso, o pessoal é muito educado, os meninos são nota 1000",
+          "quando": "um ano atrás",
+          "url": "https://maps.google.com/?cid=14261102997942894283"
+        },
+        {
+          "autor": "Juliano Monteiro",
+          "avatar": "/avatars/juliano-monteiro.jpg",
+          "nota": 5,
+          "texto": "Excelente, melhor casal de ração da região. Atendimento nota 1000",
+          "quando": "um ano atrás",
+          "url": "https://maps.google.com/?cid=14261102997942894283"
+        },
+        {
+          "autor": "Rodrigo Belmino",
+          "avatar": "/avatars/rodrigo-belmino.jpg",
+          "nota": 5,
+          "texto": "A melhor loja do mundo. Sou suspeito em falar, é um conforto só.",
+          "quando": "um ano atrás",
+          "url": "https://maps.google.com/?cid=14261102997942894283"
+        },
+        {
+          "autor": "Samara Bezzi",
+          "avatar": "/avatars/samara-bezzi.jpg",
+          "nota": 5,
+          "texto": "Atendimento excelente, tanto em loja quanto via WhatsApp!! Bons preços 👏👏",
+          "quando": "2 anos atrás",
+          "url": "https://maps.google.com/?cid=14261102997942894283"
+        }
+      ]
+    },
+    "pedro-do-rio": {
+      "rating": 5.0,
+      "total": 12,
+      "reviews": [
+        {
+          "autor": "Leonnardo Barros",
+          "avatar": "/avatars/leonnardo-barros.jpg",
+          "nota": 5,
+          "texto": "Precisei comprar um colar elizabetano para o meu cachorro Thor e fui muito bem atendido. A entrega foi domiciliar, com uma taxa justa, e tudo chegou certinho.",
+          "quando": "5 meses atrás",
+          "url": "https://maps.google.com/?cid=14713831712327167191"
+        },
+        {
+          "autor": "Maria Roselene Marques da Silva Amorim",
+          "avatar": "/avatars/maria-roselene.jpg",
+          "nota": 5,
+          "texto": "Ótima, sou cliente e fã deles",
+          "quando": "um ano atrás",
+          "url": "https://maps.google.com/?cid=14713831712327167191"
+        },
+        {
+          "autor": "Renan Martins",
+          "avatar": "/avatars/renan-martins.jpg",
+          "nota": 5,
+          "texto": "Top! Rações de ótima qualidade e preço! Atendimento excelente!!!",
+          "quando": "2 anos atrás",
+          "url": "https://maps.google.com/?cid=14713831712327167191"
+        },
+        {
+          "autor": "Guilherme Carvalho",
+          "avatar": "/avatars/guilherme-carvalho.jpg",
+          "nota": 5,
+          "texto": "A melhor e mais completa loja de ração de Pedro do Rio",
+          "quando": "2 anos atrás",
+          "url": "https://maps.google.com/?cid=14713831712327167191"
+        },
+        {
+          "autor": "Cassia Aparecida Costa Chaves",
+          "avatar": "/avatars/cassia-chaves.jpg",
+          "nota": 5,
+          "texto": "Um ótimo atendimento...",
+          "quando": "um ano atrás",
+          "url": "https://maps.google.com/?cid=14713831712327167191"
+        },
+        {
+          "autor": "Elisabete Maria",
+          "avatar": "/avatars/elisabete-maria.jpg",
+          "nota": 5,
+          "texto": "Excelente 👏😁👏😁",
+          "quando": "um ano atrás",
+          "url": "https://maps.google.com/?cid=14713831712327167191"
+        }
+      ]
+    }
+  }
+}
