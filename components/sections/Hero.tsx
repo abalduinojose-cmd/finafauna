@@ -1,4 +1,5 @@
 import { ArrowDown, PawPrint, Scissors, Store, Truck, Wheat } from "lucide-react";
+import HeroVideo from "@/components/sections/HeroVideo";
 import Button from "@/components/ui/Button";
 import WhatsAppCta from "@/components/ui/WhatsAppCta";
 import { WhatsAppIcon } from "@/components/ui/icons";
@@ -12,21 +13,26 @@ const BENEFICIOS = [
   { icone: Scissors, destaque: "Tia Jessica", rotulo: "banho e tosa com hora marcada" },
 ];
 
+// Hero de vídeo em destaque (padrão Cabana Afrodite/Quesia): o vídeo ocupa a
+// tela inteira, o conteúdo desce para a base e o véu escurece só onde o
+// texto pisa, deixando a cena aparecer.
 export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-[78svh] flex-col overflow-hidden bg-gradient-to-b from-floresta to-noite"
+      className="relative flex min-h-svh flex-col justify-end overflow-hidden bg-noite"
     >
-      <div className="paw-texture absolute inset-0 opacity-[0.025]" aria-hidden />
-      <div
-        className="absolute -right-40 -top-40 size-[34rem] rounded-full bg-caramelo/10 blur-[120px]"
-        aria-hidden
-      />
+      <div className="absolute inset-0" aria-hidden>
+        <HeroVideo />
+        <div className="absolute inset-0 bg-gradient-to-t from-noite via-noite/60 to-floresta/20" />
+        {/* no desktop o texto vive à esquerda: um véu extra só desse lado */}
+        <div className="absolute inset-0 hidden bg-gradient-to-r from-noite/60 via-noite/15 to-transparent lg:block" />
+      </div>
+      <div className="paw-texture absolute inset-0 opacity-[0.02]" aria-hidden />
 
-      <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-4 pb-14 pt-14 sm:px-6 sm:pb-20 sm:pt-24">
+      <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end px-4 pb-10 pt-32 sm:px-6 sm:pb-14">
         <h1 className="sobe max-w-4xl text-balance font-display font-bold leading-[1.06] text-white">
-          <span className="block text-[clamp(1.7rem,4.6vw,3.4rem)] font-medium text-white/80">
+          <span className="block text-[clamp(1.7rem,4.6vw,3.4rem)] font-medium text-white/85">
             Tudo para tornar
           </span>
           <span className="block text-[clamp(2.1rem,6vw,4.4rem)]">
@@ -38,7 +44,7 @@ export default function Hero() {
         </h1>
 
         <p
-          className="sobe mt-5 max-w-[46ch] text-pretty text-base leading-relaxed text-white/75 sm:mt-7 sm:text-lg"
+          className="sobe mt-5 max-w-[46ch] text-pretty text-base leading-relaxed text-white/85 sm:mt-6 sm:text-lg"
           style={{ animationDelay: "120ms" }}
         >
           Ração, acessórios, medicamentos e banho e tosa, com atendimento de
@@ -47,7 +53,7 @@ export default function Hero() {
         </p>
 
         <div
-          className="sobe mt-7 flex flex-col items-stretch gap-3 sm:mt-9 sm:flex-row sm:items-center"
+          className="sobe mt-7 flex flex-col items-stretch gap-3 sm:mt-8 sm:flex-row sm:items-center"
           style={{ animationDelay: "220ms" }}
         >
           {/* O botão "mais pet": pílula gorda com a patinha que balança */}
@@ -66,13 +72,16 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Vantagens em rotador vertical: um destaque por vez, estilo stat */}
-      <div className="sobe relative border-t border-white/10 bg-noite/50" style={{ animationDelay: "320ms" }}>
+      {/* Vantagens em rotador vertical: a faixa de vidro na base do vídeo */}
+      <div
+        className="sobe relative border-t border-white/12 bg-noite/35 backdrop-blur-sm"
+        style={{ animationDelay: "320ms" }}
+      >
         <p className="sr-only">
           Entrega em casa na região, delivery de ração no KG, duas lojas em
           Petrópolis e banho e tosa com a Tia Jessica.
         </p>
-        <div className="pb-12 pt-5">
+        <div className="py-4">
           <div className="h-16 overflow-hidden" aria-hidden="true">
             <div className="gira-beneficios">
               {[...BENEFICIOS, BENEFICIOS[0]].map((b, i) => (
@@ -86,7 +95,7 @@ export default function Hero() {
                       {b.destaque}
                     </span>
                   </span>
-                  <span className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-white/65">
+                  <span className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-white/70">
                     {b.rotulo}
                   </span>
                 </span>

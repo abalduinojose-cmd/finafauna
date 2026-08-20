@@ -111,13 +111,15 @@ export default function Delivery() {
               </Reveal>
             </div>
 
-            {/* Estoque real das lojas, com o recado que o cliente recebe */}
+            {/* A van de entregas na porta da loja, com o recado que o cliente recebe */}
             <Reveal atraso={0.12} className="relative">
               <div
                 aria-hidden
                 className="absolute -right-4 -top-4 h-full w-full rounded-[--radius-bloco] bg-floresta/10"
               />
               <div className="relative aspect-[4/5] overflow-hidden rounded-[--radius-bloco]">
+                {/* TODO: trocar pela foto da van quando o cliente salvar o
+                    arquivo em fina-fauna/fotos/ (não existe em fonte pública) */}
                 <Image
                   src="/img/granel.jpg"
                   alt="Fileira de dispensers de ração a granel dentro da loja da Fina Fauna"

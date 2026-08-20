@@ -50,7 +50,7 @@ export default function Footer() {
               alt="Fina Fauna"
               width={1200}
               height={140}
-              className="h-9 w-auto sm:h-11"
+              className="h-7 w-auto sm:h-8"
             />
             <p className="mt-3 flex items-center gap-4 font-mono text-[0.65rem] uppercase tracking-[0.24em] text-caramelo">
               <span aria-hidden className="fio-guia h-px w-10 shrink-0 opacity-80" />

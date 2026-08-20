@@ -13,7 +13,6 @@ import {
 } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { WhatsAppIcon } from "@/components/ui/icons";
 import { useWhatsApp } from "@/components/ui/WhatsAppModal";
 
 // Sem catálogo online: cada categoria abre a conversa no WhatsApp já com o
@@ -96,14 +95,16 @@ export default function Categorias() {
                 onClick={() => openWhatsApp("delivery", cat.mensagem)}
                 className="group flex w-full flex-col items-center gap-3 text-center"
               >
-                <span className="relative flex size-20 items-center justify-center rounded-full bg-creme ring-1 ring-petroleo/10 transition-all duration-200 group-hover:-translate-y-1.5 group-hover:bg-laranja group-hover:ring-laranja group-hover:shadow-[0_18px_32px_-16px_rgba(184,62,20,0.55)] sm:size-24">
+                <span className="relative flex size-20 items-center justify-center rounded-full bg-white shadow-[0_16px_34px_-22px_rgba(0,41,27,0.45)] ring-1 ring-petroleo/8 transition-all duration-200 group-hover:-translate-y-1.5 group-hover:bg-laranja group-hover:ring-laranja group-hover:shadow-[0_18px_32px_-16px_rgba(184,62,20,0.55)] sm:size-24">
+                  {/* halo pontilhado do fio da guia, acende no hover */}
+                  <span
+                    aria-hidden
+                    className="absolute -inset-2 rounded-full border border-dashed border-transparent transition-colors duration-300 group-hover:border-laranja/45"
+                  />
                   <cat.icone
                     className={`size-8 transition-all duration-200 group-hover:scale-110 group-hover:text-white sm:size-9 ${cat.cor}`}
                     aria-hidden
                   />
-                  <span className="absolute -bottom-0.5 -right-0.5 flex size-6 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_10px_-2px_rgba(0,0,0,0.3)] transition-transform duration-200 group-hover:scale-110 sm:size-7">
-                    <WhatsAppIcon className="size-3 sm:size-3.5" />
-                  </span>
                 </span>
                 <span>
                   <span className="block text-[0.8rem] font-bold leading-snug text-petroleo sm:text-sm">
@@ -123,7 +124,11 @@ export default function Categorias() {
               href="#banho-e-tosa"
               className="group flex w-full flex-col items-center gap-3 text-center"
             >
-              <span className="flex size-20 items-center justify-center rounded-full bg-petroleo transition-all duration-200 group-hover:-translate-y-1.5 group-hover:shadow-[0_18px_32px_-16px_rgba(0,77,51,0.7)] sm:size-24">
+              <span className="relative flex size-20 items-center justify-center rounded-full bg-petroleo shadow-[0_16px_34px_-22px_rgba(0,41,27,0.6)] transition-all duration-200 group-hover:-translate-y-1.5 group-hover:shadow-[0_18px_32px_-16px_rgba(0,77,51,0.7)] sm:size-24">
+                <span
+                  aria-hidden
+                  className="absolute -inset-2 rounded-full border border-dashed border-transparent transition-colors duration-300 group-hover:border-caramelo/60"
+                />
                 <Scissors
                   className="size-8 text-caramelo transition-transform duration-200 group-hover:scale-110 sm:size-9"
                   aria-hidden
