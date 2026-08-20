@@ -1,6 +1,5 @@
-// Kicker padrão do site: o fio da guia + rótulo em mono caps.
-// É o único lugar (junto com os passos do delivery e separadores) onde o
-// fio tracejado aparece.
+// Kicker padrão do site: rótulo em mono caps, sem o fio tracejado
+// (o cliente pediu para tirar todos os traços que parecem travessão).
 export default function Kicker({
   children,
   tom = "claro",
@@ -21,7 +20,6 @@ export default function Kicker({
         align === "center" ? "justify-center" : ""
       }`}
     >
-      <span aria-hidden className="fio-guia h-px w-12 shrink-0 opacity-70" />
       {children}
     </p>
   );

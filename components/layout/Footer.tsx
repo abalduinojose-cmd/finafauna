@@ -50,10 +50,9 @@ export default function Footer() {
               alt="Fina Fauna"
               width={1200}
               height={140}
-              className="h-7 w-auto sm:h-8"
+              className="h-5 w-auto sm:h-6"
             />
-            <p className="mt-3 flex items-center gap-4 font-mono text-[0.65rem] uppercase tracking-[0.24em] text-caramelo">
-              <span aria-hidden className="fio-guia h-px w-10 shrink-0 opacity-80" />
+            <p className="mt-2.5 font-mono text-[0.6rem] uppercase tracking-[0.24em] text-caramelo">
               rações · Petrópolis/RJ
             </p>
           </div>
@@ -135,7 +134,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-center gap-3">
-          <span aria-hidden className="fio-guia h-px w-full max-w-xs text-white/30" />
+          <span aria-hidden className="h-px w-full max-w-xs bg-white/15" />
           <p className="text-center font-mono text-[0.65rem] tracking-wide text-white/55">
             © {ano} Fina Fauna Rações · Petrópolis/RJ · Todos os direitos reservados
           </p>

@@ -72,10 +72,7 @@ export default function Sobre() {
           {PILARES.map((p, i) => (
             <Reveal key={p.numero} atraso={i * 0.08}>
               <article className="group h-full rounded-[--radius-bloco] border border-petroleo/8 bg-white p-6 shadow-[0_16px_40px_-30px_rgba(0,77,51,0.4)] transition-transform duration-200 hover:-translate-y-1">
-                <p className="flex items-center gap-3 font-mono text-sm font-medium text-queimado">
-                  {p.numero}
-                  <span aria-hidden className="fio-guia h-px w-8 opacity-60 transition-all duration-200 group-hover:w-12" />
-                </p>
+                <p className="font-mono text-sm font-medium text-queimado">{p.numero}</p>
                 <h3 className="mt-4 font-display text-base font-semibold leading-snug text-petroleo sm:text-lg">
                   {p.titulo}
                 </h3>
@@ -93,7 +90,6 @@ export default function Sobre() {
                 <span className="bg-gradient-to-br from-floresta to-laranja bg-clip-text font-display text-[clamp(1.8rem,4.2vw,2.6rem)] font-bold leading-none text-transparent">
                   {selo.destaque}
                 </span>
-                <span aria-hidden className="fio-guia mt-4 h-px w-8 text-caramelo/70 transition-all duration-200 group-hover:w-14" />
                 <span className="mt-3 font-mono text-[0.62rem] uppercase tracking-[0.16em] text-ink/60">
                   {selo.rotulo}
                 </span>

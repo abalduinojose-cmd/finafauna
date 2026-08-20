@@ -75,13 +75,14 @@ export default function Hero() {
           className="sobe mt-7 flex flex-col items-stretch gap-3 sm:mt-8 sm:flex-row sm:items-center"
           style={{ animationDelay: "220ms" }}
         >
-          {/* O botão "mais pet": pílula gorda com a patinha que balança */}
-          <WhatsAppCta contexto="delivery" size="lg" className="group">
+          {/* O botão "mais pet", agora com brilho: pílula em degradê laranja
+              com a patinha que balança; o secundário é vidro sobre o vídeo */}
+          <WhatsAppCta contexto="delivery" variant="hero-primary" size="lg" className="group">
             <WhatsAppIcon className="size-5" />
             Pedir no WhatsApp
             <PawPrint className="balanca-hover size-5 fill-white/25" aria-hidden />
           </WhatsAppCta>
-          <Button href="#unidades" variant="outline-light" size="lg" className="group">
+          <Button href="#unidades" variant="hero-glass" size="lg" className="group">
             Conhecer as lojas
             <ArrowDown
               className="size-4 transition-transform duration-200 group-hover:translate-y-0.5"
