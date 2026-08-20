@@ -11,6 +11,9 @@ const nextConfig: NextConfig = {
   ...(exportPages
     ? {
         output: "export" as const,
+        // pasta própria: o build da prévia não pode corromper o .next do
+        // servidor de dev que fica rodando ao mesmo tempo
+        distDir: ".next-pages",
         basePath: process.env.NEXT_PUBLIC_BASE_PATH ?? "",
         images: { loader: "custom" as const, loaderFile: "./lib/image-loader.ts" },
       }
