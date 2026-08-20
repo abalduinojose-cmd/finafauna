@@ -42,7 +42,7 @@ export default function Sobre() {
               eyebrow="Sobre nós"
               id="sobre-titulo"
               titulo="Um pet shop de bairro, do jeito que o bairro gosta"
-              descricao="A Fina Fauna é aquela loja que conhece os pets da região: produto bom, preço justo e atendimento próximo, de quem realmente entende de bicho."
+              descricao="A Fina Fauna nasceu em 2020 e virou aquela loja que conhece os pets da região: produto bom, preço justo e atendimento próximo, de quem realmente entende de bicho."
             />
           </Reveal>
 

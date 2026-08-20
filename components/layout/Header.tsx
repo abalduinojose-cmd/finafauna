@@ -29,8 +29,18 @@ function FacebookIcon({ className = "size-5" }: { className?: string }) {
 
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
+  // transição estilo Cabana Afrodite: transparente sobre o vídeo do hero,
+  // ganha o verde da marca depois de rolar (a logo não muda de cor)
+  const [rolado, setRolado] = useState(false);
 
   const { openWhatsApp } = useWhatsApp();
+
+  useEffect(() => {
+    const aoRolar = () => setRolado(window.scrollY > 24);
+    aoRolar();
+    window.addEventListener("scroll", aoRolar, { passive: true });
+    return () => window.removeEventListener("scroll", aoRolar);
+  }, []);
 
   // trava o scroll do body enquanto o drawer mobile está aberto
   useEffect(() => {
@@ -40,10 +50,16 @@ export default function Header() {
     };
   }, [menuAberto]);
 
+  const solido = rolado || menuAberto;
+
   return (
-    <header className="sticky top-0 z-50">
+    <header className="fixed inset-x-0 top-0 z-50">
       {/* Barra da marca */}
-      <div className="bg-floresta shadow-[0_10px_30px_-18px_rgba(0,41,27,0.6)]">
+      <div
+        className={`transition-colors duration-500 ${
+          solido ? "bg-floresta shadow-[0_10px_30px_-18px_rgba(0,41,27,0.6)]" : "bg-transparent"
+        }`}
+      >
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:h-[4.5rem] sm:px-6">
           <Link href="#inicio" aria-label="Fina Fauna Rações, voltar ao início">
             <Logo />
@@ -80,14 +96,18 @@ export default function Header() {
       {/* Fileira de links clara, como a barra de categorias da referência */}
       <nav
         aria-label="Navegação principal"
-        className="hidden border-b border-petroleo/10 bg-white/95 backdrop-blur lg:block"
+        className={`hidden border-b transition-colors duration-500 lg:block ${
+          solido ? "border-petroleo/10 bg-white/95 backdrop-blur" : "border-transparent bg-transparent"
+        }`}
       >
         <ul className="mx-auto flex max-w-6xl items-center justify-center gap-1 px-6">
           {LINKS.map((l) => (
             <li key={l.href}>
               <Link
                 href={l.href}
-                className="block px-4 py-3 font-mono text-[0.8rem] tracking-wide text-petroleo/80 transition-colors hover:text-laranja"
+                className={`block px-4 py-3 font-mono text-[0.8rem] tracking-wide transition-colors duration-300 ${
+                  solido ? "text-petroleo/80 hover:text-laranja" : "text-white/85 hover:text-white"
+                }`}
               >
                 {l.label}
               </Link>

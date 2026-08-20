@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import {
+  ArrowUpRight,
   Bird,
   Bone,
   Cookie,
@@ -82,66 +83,60 @@ export default function Categorias() {
           descricao="Toque no que procura: a conversa abre no WhatsApp já com o assunto certo, e a gente separa tudo para você."
         />
 
-        {/* Círculos de categoria: trilho no celular, fileira única no desktop */}
-        <div className="no-scrollbar -mx-4 mt-8 flex snap-x snap-mandatory gap-2 overflow-x-auto px-4 pb-2 pt-2 sm:gap-3 lg:mx-0 lg:mt-12 lg:grid lg:grid-cols-8 lg:overflow-visible lg:px-0 lg:pb-0">
+        {/* Cápsulas de categoria: ícone, assunto e a seta que convida ao toque.
+            Trilho no celular, grade de duas fileiras no desktop. */}
+        <div className="no-scrollbar -mx-4 mt-8 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 pt-1 sm:gap-4 lg:mx-0 lg:mt-12 lg:grid lg:grid-cols-4 lg:overflow-visible lg:px-0 lg:pb-0">
           {CATEGORIAS.map((cat, i) => (
             <Reveal
               key={cat.nome}
               atraso={i * 0.04}
-              className="w-[6.6rem] shrink-0 snap-start sm:w-28 lg:w-auto"
+              className="w-[16rem] shrink-0 snap-start lg:w-auto"
             >
               <button
                 type="button"
                 onClick={() => openWhatsApp("delivery", cat.mensagem)}
-                className="group flex w-full flex-col items-center gap-3 text-center"
+                className="group flex w-full items-center gap-3.5 rounded-full border border-petroleo/8 bg-creme/70 py-2.5 pl-2.5 pr-5 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-laranja/40 hover:bg-white hover:shadow-[0_16px_32px_-22px_rgba(184,62,20,0.5)]"
               >
-                <span className="relative flex size-20 items-center justify-center rounded-full bg-white shadow-[0_16px_34px_-22px_rgba(0,41,27,0.45)] ring-1 ring-petroleo/8 transition-all duration-200 group-hover:-translate-y-1.5 group-hover:bg-laranja group-hover:ring-laranja group-hover:shadow-[0_18px_32px_-16px_rgba(184,62,20,0.55)] sm:size-24">
-                  {/* halo pontilhado do fio da guia, acende no hover */}
-                  <span
-                    aria-hidden
-                    className="absolute -inset-2 rounded-full border border-dashed border-transparent transition-colors duration-300 group-hover:border-laranja/45"
-                  />
-                  <cat.icone
-                    className={`size-8 transition-all duration-200 group-hover:scale-110 group-hover:text-white sm:size-9 ${cat.cor}`}
-                    aria-hidden
-                  />
+                <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white shadow-[0_6px_16px_-10px_rgba(0,41,27,0.5)] ring-1 ring-petroleo/8 transition-transform duration-200 group-hover:scale-105">
+                  <cat.icone className={`size-5 ${cat.cor}`} aria-hidden />
                 </span>
-                <span>
-                  <span className="block text-[0.8rem] font-bold leading-snug text-petroleo sm:text-sm">
+                <span className="min-w-0 flex-1">
+                  <span className="block truncate text-sm font-bold leading-snug text-petroleo">
                     {cat.nome}
                   </span>
-                  <span className="mt-0.5 block text-[0.62rem] leading-snug text-ink/50 sm:text-[0.65rem]">
+                  <span className="block truncate text-[0.65rem] leading-snug text-ink/50">
                     {cat.detalhe}
                   </span>
                 </span>
+                <ArrowUpRight
+                  className="size-4 shrink-0 text-petroleo/25 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-laranja"
+                  aria-hidden
+                />
               </button>
             </Reveal>
           ))}
 
-          {/* Banho e tosa: o círculo escuro de destaque, leva à seção da Tia Jessica */}
-          <Reveal atraso={0.3} className="w-[6.6rem] shrink-0 snap-start sm:w-28 lg:w-auto">
+          {/* Banho e tosa: a cápsula escura de destaque, leva à Tia Jessica */}
+          <Reveal atraso={0.3} className="w-[16rem] shrink-0 snap-start lg:w-auto">
             <Link
               href="#banho-e-tosa"
-              className="group flex w-full flex-col items-center gap-3 text-center"
+              className="group flex w-full items-center gap-3.5 rounded-full bg-petroleo py-2.5 pl-2.5 pr-5 text-left transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_32px_-22px_rgba(0,77,51,0.8)]"
             >
-              <span className="relative flex size-20 items-center justify-center rounded-full bg-petroleo shadow-[0_16px_34px_-22px_rgba(0,41,27,0.6)] transition-all duration-200 group-hover:-translate-y-1.5 group-hover:shadow-[0_18px_32px_-16px_rgba(0,77,51,0.7)] sm:size-24">
-                <span
-                  aria-hidden
-                  className="absolute -inset-2 rounded-full border border-dashed border-transparent transition-colors duration-300 group-hover:border-caramelo/60"
-                />
-                <Scissors
-                  className="size-8 text-caramelo transition-transform duration-200 group-hover:scale-110 sm:size-9"
-                  aria-hidden
-                />
+              <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-white/10 transition-transform duration-200 group-hover:scale-105">
+                <Scissors className="size-5 text-caramelo" aria-hidden />
               </span>
-              <span>
-                <span className="block text-[0.8rem] font-bold leading-snug text-petroleo sm:text-sm">
+              <span className="min-w-0 flex-1">
+                <span className="block truncate text-sm font-bold leading-snug text-white">
                   Banho e tosa
                 </span>
-                <span className="mt-0.5 block text-[0.62rem] leading-snug text-ink/50 sm:text-[0.65rem]">
+                <span className="block truncate text-[0.65rem] leading-snug text-white/60">
                   com a Tia Jessica
                 </span>
               </span>
+              <ArrowUpRight
+                className="size-4 shrink-0 text-white/35 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-caramelo"
+                aria-hidden
+              />
             </Link>
           </Reveal>
         </div>

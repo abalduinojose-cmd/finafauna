@@ -70,9 +70,9 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Vantagens em rotador vertical: a faixa de vidro na base do vídeo */}
+      {/* Vantagens em rotador vertical: faixa sólida no verde da marca */}
       <div
-        className="sobe relative border-t border-white/12 bg-noite/35 backdrop-blur-sm"
+        className="sobe relative border-t border-white/10 bg-floresta"
         style={{ animationDelay: "320ms" }}
       >
         <p className="sr-only">
@@ -85,15 +85,17 @@ export default function Hero() {
               {[...BENEFICIOS, BENEFICIOS[0]].map((b, i) => (
                 <span
                   key={`${b.destaque}-${i}`}
-                  className="flex h-16 flex-col items-center justify-center gap-1"
+                  className="flex h-16 flex-col items-center justify-center gap-1 px-6 text-center"
                 >
                   <span className="flex items-center gap-2.5">
                     <b.icone className="size-5 shrink-0 text-laranja" aria-hidden />
                     <span className="bg-gradient-to-r from-laranja to-caramelo bg-clip-text font-display text-xl font-bold leading-none text-transparent sm:text-2xl">
                       {b.destaque}
                     </span>
+                    {/* espelho do ícone: o texto fica centrado de verdade */}
+                    <span className="size-5 shrink-0" aria-hidden />
                   </span>
-                  <span className="font-mono text-[0.62rem] uppercase tracking-[0.14em] text-white/70">
+                  <span className="text-center font-mono text-[0.62rem] uppercase tracking-[0.14em] text-white/70">
                     {b.rotulo}
                   </span>
                 </span>

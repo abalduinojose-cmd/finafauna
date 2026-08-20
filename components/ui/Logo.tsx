@@ -18,7 +18,7 @@ export default function Logo({ tamanho = "md" }: { tamanho?: "md" | "lg" }) {
         alt="Fina Fauna Rações"
         width={1200}
         height={140}
-        className={`w-auto ${lg ? "h-6" : "h-5"}`}
+        className={`w-auto ${lg ? "h-4" : "h-3.5"}`}
       />
     </span>
   );
