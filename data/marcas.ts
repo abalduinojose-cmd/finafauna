@@ -18,5 +18,4 @@ export const MARCAS: Marca[] = [
   { nome: "Quatree", arquivo: "quatree.png" },
   { nome: "Pedigree", arquivo: "pedigree.png" },
   { nome: "Foster", arquivo: "foster.png" },
-  { nome: "Quartz", arquivo: "quartz.png" },
 ];

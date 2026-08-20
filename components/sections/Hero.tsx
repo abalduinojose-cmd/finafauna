@@ -79,13 +79,13 @@ export default function Hero() {
           Entrega em casa na região, delivery de ração no KG, duas lojas em
           Petrópolis e banho e tosa com a Tia Jessica.
         </p>
-        <div className="py-4">
-          <div className="h-16 overflow-hidden" aria-hidden="true">
+        <div className="py-1">
+          <div className="h-14 overflow-hidden" aria-hidden="true">
             <div className="gira-beneficios">
               {[...BENEFICIOS, BENEFICIOS[0]].map((b, i) => (
                 <span
                   key={`${b.destaque}-${i}`}
-                  className="flex h-16 flex-col items-center justify-center gap-1 px-6 text-center"
+                  className="flex h-14 flex-col items-center justify-center gap-0.5 px-6 text-center"
                 >
                   <span className="flex items-center gap-2.5">
                     <b.icone className="size-5 shrink-0 text-laranja" aria-hidden />
